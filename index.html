@@ -1,10 +1,9 @@
 <!DOCTYPE html>
 <html>
-
-<head>
-  <meta charset=UTF-8 />
+  <head>
+  <meta charset="UTF-8">
   <title>Age Calculator</title>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&amp;display=swap" rel="stylesheet">
   <link rel="stylesheet" href="agewarp.css">
   <link rel="icon" type="image/png" href="me-wink.png">
   <style>
@@ -16,6 +15,7 @@
       align-items: center;
       height: 100vh;
       margin: 0;
+      cursor: none;
     }
 
     .container {
@@ -83,12 +83,8 @@
 </head>
 
 <body>
-  <form id="playlistForm">
-    <label for="playlistUrl">Enter Spotify Playlist URL:</label>
-    <input type="text" id="playlistUrl" name="playlistUrl" required>
-    <button type="submit">Embed</button>
-  </form>
-  <div id="embedCode"></div>
+  
+  
 
   <script src="embed.js"></script>
 
@@ -159,7 +155,14 @@
     }
     init();
 
-  </script>
-</body>
+  </script><canvas width="1246" height="730" style="width: 1246px; height: 730px;"></canvas>
 
+
+<script>
+  if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('service-worker.js');
+  }
+</script>
+<script src="service-worker.js"></script>
+</body>
 </html>
